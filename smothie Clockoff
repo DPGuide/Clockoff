@@ -619,7 +619,7 @@ static lv_res_t _action_clock_edit(lv_obj_t *btns, const char * txt)
 			break;
 		}
 
-		time.year = year + 2018;
+		time.year = year + 2021;
 		time.month = month;
 		time.day = day;
 		time.hour = hour;
@@ -734,7 +734,7 @@ static lv_res_t _create_mbox_clock_edit(lv_obj_t *btn)
 
 	static char minutes[512];
 	minutes[0] = 0;
-	for (u32 i = 0; i < 59; i++)
+	for (u32 i = 0; i < 60; i++)
 		s_printf(minutes + strlen(minutes), " %02d \n", i);
 	minutes[strlen(minutes) -1] = 1;
 	lv_obj_t *roller_minute = lv_roller_create(h1, roller_year);
